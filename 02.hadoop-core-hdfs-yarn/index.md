@@ -21,8 +21,8 @@ duration: 3 hours
 
 ## Apache Hadoop core
 
-- **HDFS:** Hadoop Distributed File System
-- **YARN:** Yet Another Resource Negotiator
+- **HDFS:** Hadoop Distributed File System (~= Computer FS)
+- **YARN:** Yet Another Resource Negotiator (~= Operating System)
 - **MapReduce:** Big Data applications framework
 
 ## What is HDFS?
@@ -40,7 +40,7 @@ The **Hadoop Distributed File System**:
 ## Master / Slave architecture
 
 - Master component coordinates workers
-- Worker components do the job (compute)
+- Worker components do the job (store & compute)
 
 Other distributed architectures?
 
@@ -55,16 +55,15 @@ Other distributed architectures?
 
 ## HDFS: Architecture
 
-- **NameNode** (= master): Handles file system metadata. For each file, it knows
-
+- **NameNode** (= master): Handles file system **metadatas**. For each file, it knows
+  - The path of file in HDFS
   - The blocks that compose the file
-  - The position of each block in the cluster
+  - The position of each block of the file
 
 - **DataNodes** (= workers):
-
   - Store the blocks on disks (hardware optimization)
   - Handle read/write operations
-
+  
 - **Secondary NameNode:** Builds HDFS checkpoints (= FSImage) from NameNode edit logs
 
 ## HDFS: Data replication example

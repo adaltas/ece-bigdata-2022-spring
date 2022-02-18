@@ -30,25 +30,48 @@ A distributed system is a group of computers that appear as a unique and coheren
 
 ## Basic knowledge: Data structure
 
-- Structured: RDBMS tables, Excel
-- Semi-structured: JSON, XML, CSV
-- Unstructured: plain text, images, sound
+- **Structured:** RDBMS tables, Excel
+
+- **Semi-structured:** JSON, XML, CSV
+
+  ```json
+  [
+      {
+          "lastname": "LEONARD",
+          "firstname": "Gauthier",
+          "age": 26,
+          "missions": ["Autodistribution"]
+      },
+      {
+          "lastname": "TATA",
+          "firstname": "Toto",
+          "age": "33"
+      }
+  ]
+  ```
+
+  ```
+  lastname,firstname,age,missions
+  LEONARD,Gauthier,26,Autodistribution
+  ```
+
+- **Unstructured:** plain text, images, sound
 
 ## History of data
 
-70's - 00's: RDBMS
+70's - 00's: RDBMS (Relational DataBase Management System)
 
 - Data created and used only by technical people
 - Non human readable
 - Strongly typed
 
-2000-2005: Internet rises
+2000-2005: Internet rises (Web 1.0)
 
 - Access to data
 - Readable data, unstructured data
 - Beginning of NoSQL
 
-2005-today: Social networks, customer 360
+2005-today: Social networks (Web 2.0), customer 360
 
 - Data explosion
 - Data created and used by everyone
@@ -78,7 +101,7 @@ Disadvantages:
 ## Big Data: The 3 Vs - Volume
 
 - It doesn’t fit in a RDBMS (TB, PB)
-- It cannot be processed by one machine
+- **It cannot be processed by one machine**
 - E.g. 1 day at Facebook:
   - 3 billions + content elements
   - 4 PB + of new data
@@ -88,7 +111,7 @@ Disadvantages:
 - To save and process all the all data generated
   - E.g. Google processes 100 million pages per day
 - To deliver near real time results
-  - E.g. Google search results < 1 sec, Facebook Messenger
+  - E.g. Google search results < 0.1 sec, Facebook Messenger
 
 ## Big Data: The 3 Vs - Variety
 
@@ -97,11 +120,16 @@ Disadvantages:
 
 ## Why do we need Big Data?
 
+- If **business critical** for the company
+- Other companies:
+  - Take advantage of all the data sitting in all places of the company
+  - Centralize storage and compute in one place
+
 ## Big Data clusters
 
-- Cluster: Group of connected computers that can be viewed as a single system
+- Cluster: Group of connected computers/servers that can be viewed as a single system
 - Master-slave model
-- Examples:
+- Examples of Big Data platforms:
   - Apache Hadoop
   - Elasticsearch
 
@@ -109,10 +137,16 @@ Disadvantages:
 
 ## The Hadoop Ecosystem
 
+- A stack of **Open Source softwares** offering all the functionalities needed to build a [Data Lake](https://en.wikipedia.org/wiki/Data_lake) and exploit the data stored in it. Most of the Hadoop projects are maintained by the [Apache Software Foundation](https://apache/org) and can be found on [their GitHub](https://github.com/apache).
+- Nearly are built using **Java** or at least run in the **JVM** (Java Virtual Machine)
+- Preferred execution environment: **Linux**
+
+### Software stack
+
 - Distributed Filesystem: HDFS
 - Cluster Manager: YARN
 - Execution Engines: MapReduce, Tez, Spark
-- Warehouse /SQL: Hive
+- Warehouse / SQL: Hive
 - NoSQL DB: HBase
 - And other stuff
 
@@ -120,18 +154,18 @@ Disadvantages:
 
 - Business intelligence
 - Data Mining
-- Visualisation, graphs
+- Visualization, graphs
 - SQL / BI Tools
 
 ## Data jobs: Data Scientist
 
 - Machine Learning / Deep Learning
-- Feature engineering - Visualisation
-- Python / R
+- Data Mining / Feature engineering - Visualization
+- SQL / Python / R
 
-## Data jobs: the Data Science hierarchy of needs
+### The Data Science hierarchy of needs
 
-- Learn, optmize
+- Learn, optimize
 - Aggregate, label
 - Explore, transform
 - Move, store
@@ -145,7 +179,8 @@ Data Engineers are in charge of building the infrastructure to deliver, store an
 
 - Data ingestion and storage
 - Data pipelines and orchestration - Optimization
-- Hive / Spark / DFS
+- Assist Data Analysts & Data Scientists to apply best practices
+- Hive / Spark / Storage / Pipelines
 
 ## Data jobs: Data Architect
 

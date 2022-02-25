@@ -24,7 +24,10 @@ You should have received an email from Adaltas containing a `.ovpn` file that yo
 4. Test that everything is working by pinging the edge server:
    ```
    ping edge-1.au.adaltas.cloud
+   PING edge-1.au.adaltas.cloud (10.0.0.63) 56(84) bytes of data.
    ```
+   
+   The IP address has to be `10.0.0.63`. If it is `51.68.117.245` (the server public address), **it means the VPN is not active**.
 
 ### Troubleshooting
 

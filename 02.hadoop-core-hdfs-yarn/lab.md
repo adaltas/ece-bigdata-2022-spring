@@ -17,7 +17,7 @@ Using the official [HDFS DFS Commands Guide](https://hadoop.apache.org/docs/curr
 2. Create a subdirectory `lab2` in the directory created in 1.
 3. Create a file named `sentence1.txt` on the local file system and write a sentence inside that file
 4. Copy the file to your `lab2` HDFS directory
-5. Get information about the blocks composing your file, their replica and locations using `hadoop fsck`
+5. Get information about the blocks composing your file, their replica and locations using `hadoop fsck` (see [hdfs fsck](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HDFSCommands.html#fsck))
 
 ### Submit an application in YARN
 

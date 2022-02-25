@@ -114,8 +114,7 @@ Components:
 Yet Another Resource Negotiator:
 
 - Cluster resource manager:
-
-- - Handles the **RAM** and the **CPU** of workers
+  - Handles the **RAM** and the **CPU** of workers
   - Allocates resources to applications
 
 - Job monitoring
@@ -123,8 +122,7 @@ Yet Another Resource Negotiator:
 ## YARN: Architecture
 
 - **ResourceManager** (= master):
-
-- - Schedule applications based on available resources
+  - Schedule applications based on available resources
   - Gather information about running applications
 
 - **NodeManager** (= worker): Handle resources on one worker

@@ -11,7 +11,10 @@ def text_to_words(text):
 
     for line in text:
         for word in line.strip().split():
-            key_values.append({'key': word, 'value': 1})
+            word_no_special_chars = ''.join(
+                [c if c.isalnum() else '' for c in word]
+            )
+            key_values.append({'key': word_no_special_chars, 'value': 1})
 
     return key_values
 

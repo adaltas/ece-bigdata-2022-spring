@@ -14,7 +14,11 @@ def text_to_words(text):
             word_no_special_chars = ''.join(
                 [c if c.isalnum() else '' for c in word]
             )
-            key_values.append({'key': word_no_special_chars, 'value': 1})
+            if word_no_special_chars:
+                key_values.append({
+                    'key': word_no_special_chars,
+                    'value': 1
+                })
 
     return key_values
 

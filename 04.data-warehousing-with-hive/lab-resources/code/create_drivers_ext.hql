@@ -1,6 +1,7 @@
+-- DO NOT USE '.' NOR '-' IN USERNAME
 SET hivevar:username=gauthier;
 
-CREATE EXTERNAL TABLE IF NOT EXISTS cs_2022_spring_1.${username}_nyc_drivers_ext (
+CREATE EXTERNAL TABLE IF NOT EXISTS ece_2022_spring_app_1.${username}_nyc_drivers_ext (
   driver_id INT,
   -- COMPLETE HERE
 )

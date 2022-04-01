@@ -14,8 +14,8 @@ duration: 3 hours
 
 ## Apache Hive
 
-- Query data on HDFS using SQL like language: HiveQL
-- Converts HiveQL to a DAG of jobs on YARN
+- Query data on HDFS using **SQL like language**: HiveQL
+- Converts **HiveQL to a DAG of jobs** on YARN
 - Works with multiple execution frameworks:
   - MapReduce: disk I/O intensive
   - Tez: uses RAM and can chain reduces
@@ -27,7 +27,7 @@ duration: 3 hours
 - Supports **multiple file formats**:
   - Readable semi-structured (CSV, JSON…)
   - Optimized file format (**ORC**, Parquet, Avro)
-- Can also read data from other Hadoop systems : HBase, Kafka
+- Can also read data from other systems : HBase, Kafka, PostgreSQL, etc.
 
 ## Data file formats
 
@@ -44,7 +44,7 @@ duration: 3 hours
 
 - **HiveServer**
   - Translates HQL to Tez or MR jobs
-- **Metastore** (stores data in RDBMS)
+- **Hive Metastore** (stores data in RDBMS)
   - Stores metadata (table names, schema, data location)
   - Stores statistics on the tables
 - **Hive clients** (JDBC). E.g. Beeline

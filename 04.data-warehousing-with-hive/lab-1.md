@@ -14,14 +14,14 @@ For this lab we will be using a very small dataset of NYC taxi drivers.
 
 Using the official [Hive Data Definition Langage](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL):
 
-1. Using the HDFS CLI, take a look at the data used for this lab at `/education/cs_2022_spring_1/resources/lab4/nyc_drivers/drivers.csv`
+1. Using the HDFS CLI, take a look at the data used for this lab at `/education/ece_2022_spring_app_1/resources/lab4/nyc_drivers/drivers.csv`
 
 2. Copy the `nyc_drivers` folder to your user directory in HDFS:
 
    ```bash
-   hdfs dfs -mkdir -p "/education/cs_2022_spring_1/$USER/lab4"
+   hdfs dfs -mkdir -p "/education/ece_2022_spring_app_1/$USER/lab4"
 
-   hdfs dfs -cp /education/cs_2022_spring_1/resources/lab4/nyc_drivers "/education/cs_2022_spring_1/$USER/lab4"
+   hdfs dfs -cp /education/ece_2022_spring_app_1/resources/lab4/nyc_drivers "/education/ece_2022_spring_app_1/$USER/lab4"
    ```
 
 3. Open a Beeline session by typing `beeline`
@@ -31,11 +31,11 @@ Using the official [Hive Data Definition Langage](https://cwiki.apache.org/confl
    ```sql
    SET hivevar:username=YOUR_USERNAME;
 
-   CREATE EXTERNAL TABLE cs_2022_spring_1.${username}_nyc_drivers_ext (
+   CREATE EXTERNAL TABLE ece_2022_spring_app_1.${username}_nyc_drivers_ext (
      driver_id INT,
      -- COMPLETE HERE
    )
-   ROW FORMAT SERDE -- COMPLETE HERE
+   ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
    STORED AS TEXTFILE
    LOCATION -- COMPLETE HERE
    TBLPROPERTIES ('skip.header.line.count'='1');
@@ -57,7 +57,7 @@ STORED AS ORC;
    2. The column `name` devided into `first_name` and `last_name`
    3. The columne `location` renamed as `address` (because `LOCATION` is a Hive keyword)
    4. The column `certified` as a `BOOLEAN`
-2. Check that your table was created using the HDFS CLI at `/warehouse/tablespace/managed/hive/cs_2022_spring_1.db/${username}_nyc_drivers` (should be empty)
+2. Check that your table was created using the HDFS CLI at `/warehouse/tablespace/managed/hive/ece_2022_spring_app_1.db/${username}_nyc_drivers` (should be empty)
 
 ### Load data from the CSV table to the ORC table
 
@@ -68,4 +68,4 @@ Now we want to populate our ORC table from our CSV table. Using the [Hive Data M
    - Transform `certified` from `STRING` to `BOOLEAN`
    - Rename `location` to `address`
 2. Execute your query
-3. Check what the data looks like in the managed table using the HDFS CLI at `/warehouse/tablespace/managed/hive/cs_2022_spring_1.db/${username}_nyc_drivers`
+3. Check what the data looks like in the managed table using the HDFS CLI at `/warehouse/tablespace/managed/hive/ece_2022_spring_app_1.db/${username}_nyc_drivers`

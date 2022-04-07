@@ -20,7 +20,7 @@ Using the official [Hive Data Definition Langage](https://cwiki.apache.org/confl
 
    ```bash
    hdfs dfs -mkdir -p "/education/ece_2022_spring_app_1/$USER/lab4"
-
+   
    hdfs dfs -cp /education/ece_2022_spring_app_1/resources/lab4/nyc_drivers "/education/ece_2022_spring_app_1/$USER/lab4"
    ```
 
@@ -29,9 +29,11 @@ Using the official [Hive Data Definition Langage](https://cwiki.apache.org/confl
 4. Create an external table targeting our data with this statement (to be completed, replace `YOUR_USERNAME`):
 
    ```sql
-   SET hivevar:username=YOUR_USERNAME;
-
-   CREATE EXTERNAL TABLE ece_2022_spring_app_1.${username}_nyc_drivers_ext (
+   SET hivevar:clusterUsername=p.nom-ece;
+   -- DO NOT USE '.' NOR '-' IN HIVEUSERNAME
+   SET hivevar:hiveUsername=p_nom_ece;
+   
+   CREATE EXTERNAL TABLE ece_2022_spring_app_1.${hiveUsername}_nyc_drivers_ext (
      driver_id INT,
      -- COMPLETE HERE
    )
@@ -55,9 +57,9 @@ STORED AS ORC;
 1. Create a managed ORC table (**not external**) that must have the same schema as the external table created above (`${username}_nyc_drivers_ext`) but with:
    1. The `_ext` prefix removed from the name: `${username}_nyc_drivers`
    2. The column `name` devided into `first_name` and `last_name`
-   3. The columne `location` renamed as `address` (because `LOCATION` is a Hive keyword)
+   3. The column `location` renamed as `address` (because `LOCATION` is a Hive keyword)
    4. The column `certified` as a `BOOLEAN`
-2. Check that your table was created using the HDFS CLI at `/warehouse/tablespace/managed/hive/ece_2022_spring_app_1.db/${username}_nyc_drivers` (should be empty)
+2. Check that your table was created using the HDFS CLI at `/warehouse/tablespace/managed/hive/ece_2022_spring_app_1.db/${hiveUsername}_nyc_drivers` (should be empty)
 
 ### Load data from the CSV table to the ORC table
 

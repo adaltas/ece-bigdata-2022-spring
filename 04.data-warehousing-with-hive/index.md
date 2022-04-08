@@ -70,17 +70,6 @@ duration: 3 hours
   - 1 partition = 1 subfolder in HDFS
     - `.../products_table/p_type=book/orc_data`
 
-## Hive buckets
-
-- Splits the partitions into multiple files
-  - `.../products_table/type=book/orc_data_bucket_1`
-  - `.../products_table/type=book/orc_data_bucket_2`
-- Enables sampling based on buckets
-- Number of reducers is equal to the number of buckets
-- Hard to use correctly (need for a specific reason)
-
-![Partitioning vs bucketing](./assets/partitioning_bucketing.jpg)
-
 ## Bronze/silver/gold paradigm
 
 ![bronze/silver/gold](./assets/bronze-silver-gold.png)

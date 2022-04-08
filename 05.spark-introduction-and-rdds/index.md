@@ -60,9 +60,33 @@ When you write the code and submit it, Spark:
   - examples: `orderBy()`, `groupBy()`, `filter()`, `select()`, `join()`
 - **Actions**:  
   - get the result
-  - examples: show(), take(), count(), collect(), save())
+  - examples: `show()`, `take(10)`, `count()`, `collect()`, `save()`
 
 **Lazy evaluation**: transformations triggered when action is called.
+
+### API
+
+Chain transformations and use the result with an action :
+
+```Python
+rdd = (
+    sc.wholeTextFiles('hdfs://text/file/path')
+    .map(lambda x: x.split(','))      #transformation
+    .flatMap(...)                     #transformation
+    .groupByKey(...)                  #transformation
+)
+
+rdd.take(10)      # action
+```
+
+When an action is run:
+
+- Spark builds a **Directed Acyclic Graph (DAG)** of stages
+- 1 **stage** = X **tasks** (1 by RDD partition)
+- Tasks are sent to **executors**
+- The end of one stage is conditioned by a **shuffle**
+
+![Spark DAG](./image/spark_dag.png)
 
 ## RDDs: Resilient Distributed Datasets
 
@@ -78,28 +102,6 @@ When you write the code and submit it, Spark:
   - **1 partition** = **1 block** = 128 MB in HDFS
   - **1 task** runs on **1 partition**
   - Default = 1 partition per CPU core
-
-### API
-
-Chain transformations and use the result with an action :
-
-```Python
-rdd = sc.wholeTextFiles('hdfs://text/file/path') \
-        .map(lambda x: x.split(',')) \      #transformation
-        .flatMap(...) \                     #transformation
-        .groupByKey(...)                    #transformation
-
-rdd.take(10)      # action
-```
-
-When an action is run:
-
-- Spark builds a **Directed Acyclic Graph (DAG)** of stages
-- 1 **stage** = X **tasks** (1 by RDD partition)
-- Tasks are sent to **executors**
-- The end of one stage is conditioned by a **shuffle**
-
-![Spark DAG](./image/spark_dag.png)
 
 ### Narrow and wide transformations
 

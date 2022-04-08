@@ -10,7 +10,6 @@ Connect to the Adaltas cloud cluster using OpenVPN.
 
 ### Goals
 
-- Get familiar with the Databricks environment
 - Get familiar with the most frequently used functions for RDD processing: `map`, `flatMap`, `reduceByKey`
 - Learn how to define lambda functions
 - Learn when you can use pure Python functionalities and constructs in Spark environment  
@@ -20,10 +19,10 @@ Connect to the Adaltas cloud cluster using OpenVPN.
 1. Navigate to http://zep-1.au.adaltas.cloud:9995 with your browser
 2. Login using your Adaltas cloud credentials
    ![Zeppelin login](images/zeppelin-login.png)
-3. In the folder `ece-2020/spark/ref`:
+3. In the folder `ece-2022-spring/spark/ref`:
    1. Navigate to the `lab1` notebook
-   2. Create a copy of the notebook (by using the **Clone this note** button) and name it like follow: `ece-2020/spark/cluster-username/lab1` (e.g. `ece-2020/spark/gauthier/lab1`). This should create your folder in `ece-20202/spark`.
-   3. In your notebook `lab1` → **🔒 Note permissions**: add the user `gauthier` or `xavier` to the “Runners” (and any other user you want)
+   2. Create a copy of the notebook (by using the **Clone this note** button) and name it like follow: `ece-2022-spring/spark/cluster-username/lab1` (e.g. `ece-2022-spring/spark/gauthier/lab1`). This should create your folder in `ece-2022-spring/spark`.
+   3. In your notebook `lab1` → **🔒 Note permissions**: add the user `gauthier` to the “Runners” (and any other user you want)
    4. Initialize your interpreter by running the first cell
 
 ### During the session

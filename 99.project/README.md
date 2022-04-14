@@ -23,7 +23,12 @@ Ingest and analyze [Internet Speed Dataset](https://www.kaggle.com/datasets/dhru
    - `file_date`
    - `benchmark_type` ("mobile" or "fixed")
 
-2. Transform the `tile` column to [GeoJSON](https://geojson.org/geojson-spec.html):
+2. Save the "bronze" table partitioned by `year` and `quarter` in HDFS (in Parquet format)
+3. Create a table with geolocation information about countries (bonus: regions, etc.). Find the data on the internet.
+
+### Silver tables
+
+1. Create a new column with the `tile` stored as [GeoJSON](https://geojson.org/geojson-spec.html):
 
    ```json
    {
@@ -43,13 +48,8 @@ Ingest and analyze [Internet Speed Dataset](https://www.kaggle.com/datasets/dhru
    }
    ```
 
-3. Save the "bronze" table partitioned by `year` and `quarter` in HDFS (in Parquet format)
-4. Create a table with geolocation information about countries (bonus: regions, etc.). Find the data on the internet.
-
-### Silver tables
-
-1. Enrich the `internet-speed-dataset` with country (regions, etc.) informations
-2. Save the result as a "silver" table partitioned by `year` and `quarter` (in Parquet format)
+2. Enrich the `internet-speed-dataset` with country (regions, etc.) informations
+3. Save the result as a "silver" table partitioned by `year` and `quarter` (in Parquet format)
 
 ### Gold tables
 

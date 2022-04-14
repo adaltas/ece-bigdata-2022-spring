@@ -12,6 +12,8 @@ Ingest and analyze [Internet Speed Dataset](https://www.kaggle.com/datasets/dhru
 
 ## Subject
 
+**Note:** Store the tables in `/education/ece_2022_spring_app_1/group-${GROUP_NB}`
+
 ### Bronze table
 
 1. Enrich the "bronze" `internet-speed-dataset` table with information from the directory/filename:

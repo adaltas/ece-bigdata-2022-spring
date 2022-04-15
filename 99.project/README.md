@@ -12,7 +12,11 @@ Ingest and analyze [Internet Speed Dataset](https://www.kaggle.com/datasets/dhru
 
 ## Subject
 
-**Note:** Store the tables in `/education/ece_2022_spring_app_1/group-${GROUP_NB}`
+**Important:**
+
+- Comment your code
+- Give access to the notebooks to `gauthier`
+- Store the tables in `/education/ece_2022_spring_app_1/group-${GROUP_NB}-${NAME_1}-${NAM_2}`
 
 ### Bronze table
 
@@ -24,7 +28,7 @@ Ingest and analyze [Internet Speed Dataset](https://www.kaggle.com/datasets/dhru
    - `benchmark_type` ("mobile" or "fixed")
 
 2. Save the "bronze" table partitioned by `year` and `quarter` in HDFS (in Parquet format)
-3. Create a table with geolocation information about countries (bonus: regions, etc.). Find the data on the internet.
+3. (Done) Create a table with geolocation information about countries (bonus: regions, etc.). Find the data on the internet. -> `/education/ece_2022_spring_app_1/resources/project/countries/countries.geojson`
 
 ### Silver tables
 

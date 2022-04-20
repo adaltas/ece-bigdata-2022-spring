@@ -11,12 +11,12 @@ duration: 3 hours
   - Examples : Redis, Memcache (in memory)
 - **Columnar**:
   - 1 key = X values stored in columns
-  - Examples : HBase, Cassandra
+  - Examples : Apache HBase, Apache Cassandra
 - **Document stores**:
   - JSON/XML like objects
   - Examples : MongoDB, CouchDB
 - **Graph**:
-  - Store nodes and relationships between them
+  - Store nodes and relationships (edges) between them
   - Examples : Neo4j, JanusGraph
 
 ## Apache HBase
@@ -31,7 +31,7 @@ duration: 3 hours
 - **Consistency**: For one given query, all the nodes return the same result
 - **Availability**: Every query receives a fast response, without guarantee that this is the latest value
 - **Partition tolerance**: The system continues to work even if some nodes are disconnected
-- No distributed storage system can ensure more than 2 of those properties at the same time
+- No storage system can ensure more than 2 of those properties at the same time
 
 ![CAP theorem](./assets/cap_theorem.png)
 

@@ -2,6 +2,10 @@
 
 Ingest and analyze [Internet Speed Dataset](https://www.kaggle.com/datasets/dhruvildave/ookla-internet-speed-dataset).
 
+## Deadline
+
+March 13th 2022
+
 ## Goals
 
 - Develop a **PySpark application**
@@ -16,7 +20,8 @@ Ingest and analyze [Internet Speed Dataset](https://www.kaggle.com/datasets/dhru
 
 - Comment your code
 - Give access to the notebooks to `gauthier`
-- Store the tables in `/education/ece_2022_spring_app_1/group-${GROUP_NB}-${NAME_1}-${NAM_2}`
+- Store the tables in `/education/ece_2022_spring_app_1/group-${GROUP_NB}-${NAME_1}-${NAME_2}`
+- Store the notebooks in `/ece/2022-spring/group/group-${GROUP_NB}-${NAME_1}-${NAME_2}`
 
 ### Bronze table
 

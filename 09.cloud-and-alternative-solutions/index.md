@@ -6,7 +6,7 @@ duration: 3 hours
 
 ## Types of cloud computing
 
-![Types of cloud computing](./assets/cloud_types.png)
+![Types of cloud computing](./assets/iaas-paas-saas.png)
 
 ## Bare-metal vs Cloud
 
@@ -16,8 +16,8 @@ duration: 3 hours
   - Pay at usage
 - Time to market
 - Total Cost of Ownership
-  - It’s f***ing easy
-  - It’s f***ing expensive
+  - It’s easy
+  - It’s expensive
 - CLOUD Act
 
 ## Solutions and tools - IaaS
@@ -33,20 +33,20 @@ duration: 3 hours
 ## Solutions and tools - PaaS
 
 - **Data Warehouse** platforms: Snowflake, Teradata
-- **Data Analysis** platforms: Databricks (Azure, AWS)
+- **Data Analysis** platforms: Databricks (Azure, AWS, GCP)
 - **Managed Big Data** platforms: Elastic Cloud, Cloudera Data Platform
 
 ## Solutions and tools - ETL/Dataﬂow/Streaming
 
 - **ETL**: Talend, Informatica
-- **Dataflow**: NiFi, StreamSets, SnapLogic
+- **Dataflow**: Apache NiFi, StreamSets, SnapLogic
 - **Messaging**: Kafka (Confluent), RabbitMQ
 - **Streaming frameworks**: Spark Streaming (Databricks), Flink (Ververica), Kafka Streams (Confluent)
 
 ## Solutions and tools - BI & Monitoring
 
 - **Business Intelligence**: Qlikview, Tableau, Power BI, MicroStrategy
-- **Monitoring**: Datadog, Splunk
+- **Monitoring**: Datadog, Splunk, Prometheus, Grafana
 
 ## Solutions and tools - ML Platforms
 

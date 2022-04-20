@@ -102,6 +102,7 @@ Integration with LDAP
 
 ## Governance
 
+- Data catalog
 - Audit logs (who accessed what data)
 - Data lineage (application: GDPR)
 - **Apache Atlas**:
